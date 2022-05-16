@@ -1,6 +1,4 @@
 <h1>Inventory Items</h1>
 <% @items.each do |item| %>
-  <p>Name: <%= item.name %></p>
-  <li>Price: <%= item.description %></li>
-  <li>Descriptiom: <%= item.price %></li>
+  <p><%= link_to "#{item.name}", item_path(item) %></p>
 <% end  %>

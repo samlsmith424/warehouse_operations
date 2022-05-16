@@ -7,10 +7,22 @@ RSpec.describe 'Items Index Page' do
 
     expect(page).to have_content("Inventory Items")
     expect(items.count).to eq(3)
-    items.each do |item|
-      expect(item.name).to be_a(String)
-      expect(item.description).to be_a(String)
-      expect(item.price).to be_a(Float)
-    end
+    # items.each do |item|
+    #   expect(item.name).to be_a(String)
+    #   expect(item.description).to be_a(String)
+    #   expect(item.price).to be_a(Float)
+    # end
+  end
+
+  it 'has a link to each item show page' do
+    item = FactoryBot.create(:item)
+
+    visit items_path
+
+    expect(page).to have_link(item.name)
+
+    click_link(item.name)
+
+    expect(current_path).to eq(item_path(item.id))
   end
 end
