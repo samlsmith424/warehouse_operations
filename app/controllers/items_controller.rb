@@ -34,6 +34,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    Item.destroy(params[:id])
+    redirect_to items_path, notice: "Item successfully deleted."
   end
 
   private

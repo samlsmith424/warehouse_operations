@@ -4,3 +4,4 @@
 <p>Description: <%= @item.description %></p>
 <p>Price: <%= @item.price %></p>
 <%= button_to "Edit Item", edit_item_path(@item), method: :get %>
+<%= button_to "Delete Item", { action: :destroy, id: @item.id },  method: :delete %>
