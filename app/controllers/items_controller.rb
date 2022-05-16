@@ -1,11 +1,11 @@
 class ItemsController < ApplicationController
+  before_action :find_item_id, only: [:show, :edit, :update, :destroy]
+
   def index
     @items = Item.all
   end
 
-  def new
-
-  end
+  def new; end
 
   def create
     item = Item.new(params.permit(:name, :description, :price))
@@ -16,25 +16,20 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
-    @item = Item.find(params[:id])
-  end
+  def show; end
 
-  def edit
-    @item = Item.find(params[:id])
-  end
+  def edit; end
 
   def update
-    item = Item.find(params[:id])
-    if item.update(item_params)
-      redirect_to item_path(item), notice: "Update was successfull."
+    if @item.update(item_params)
+      redirect_to item_path(@item), notice: "Update was successfull."
     else
-      redirect_to edit_item_path(item), notice: "Unable to update item, please try again"
+      redirect_to edit_item_path(@item), notice: "Unable to update item, please try again"
     end
   end
 
   def destroy
-    Item.destroy(params[:id])
+    @item.destroy
     redirect_to items_path, notice: "Item successfully deleted."
   end
 
@@ -43,5 +38,9 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :description, :price)
     # params.permit(:name, :description, :price)
+  end
+
+  def find_item_id
+    @item = Item.find(params[:id])
   end
 end
