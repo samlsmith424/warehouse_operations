@@ -4,10 +4,11 @@ class ItemsController < ApplicationController
   end
 
   def new
+
   end
 
   def create
-    item = Item.new(item_params)
+    item = Item.new(params.permit(:name, :description, :price))
     if item.save
       redirect_to items_path
     else
@@ -20,9 +21,16 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @item = Item.find(params[:id])
   end
 
   def update
+    item = Item.find(params[:id])
+    if item.update(item_params)
+      redirect_to item_path(item), notice: "Update was successfull."
+    else
+      redirect_to edit_item_path(item), notice: "Unable to update item, please try again"
+    end
   end
 
   def destroy
@@ -31,7 +39,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    # params.require(:item).permit(:name, :description, :price)
-    params.permit(:name, :description, :price)
+    params.require(:item).permit(:name, :description, :price)
+    # params.permit(:name, :description, :price)
   end
 end
