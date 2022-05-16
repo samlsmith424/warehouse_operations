@@ -14,11 +14,11 @@ RSpec.describe "Update Item" do
 
     expect(current_path).to eq(item_path(item))
     expect(page).to have_content("Pencil Sharpener")
-    # expect(page).to have_content("Update was successfull.")
-    # expect(page).to_not have_content("Water fountain")
+    expect(page).to have_content("Update was successfull.")
+    expect(page).to_not have_content("Water fountain")
   end
 
-  xit 'receives feedback if update was unsuccessful' do
+  it 'receives feedback if update was unsuccessful' do
     item = Item.create(name: "Water fountain", description: "Emits water", price: 101010.00)
 
     visit edit_item_path(item)
