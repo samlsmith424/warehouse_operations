@@ -1,12 +1,11 @@
 class WarehousesController < ApplicationController
+  before_action :find_warehouse_id, only: [:show, :update]
+
   def index
     @warehouses = Warehouse.all
-    # @items = Item.all
   end
 
-  def show
-    @warehouse = Warehouse.find(params[:id])
-  end
+  def show; end
 
   def create
     warehouse = Warehouse.new(warehouse_params)
@@ -18,19 +17,18 @@ class WarehousesController < ApplicationController
   end
 
   def update
-    warehouse = Warehouse.find_by(id: params[:id])
     item = Item.find_by(id: params[:items].to_i)
-    warehouse.add_item(item)
-    redirect_to warehouse_path(warehouse)
+    @warehouse.add_item(item)
+    redirect_to warehouse_path(@warehouse)
   end
-  # warehouse = Warehouse.find_by(id: params[:id])
-  # item = Item.find_by(id: params["items"][1].to_i)
-  # warehouse.add_item(item)
-  # redirect_to warehouse_path(warehouse)
 
   private
 
   def warehouse_params
     params.permit(:name, :location)
+  end
+
+  def find_warehouse_id
+    @warehouse = Warehouse.find(params[:id])
   end
 end
