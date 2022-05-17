@@ -1,24 +1,55 @@
-# README
+# Inventory Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application utilizes CRUD functionality and an MVC structure to create inventory items that can be assigned to warehouses. 
 
-Things you may want to cover:
+#### Setup:
+* Fork and Clone the repo
+* Install gem packages: `bundle install`
+* Setup the database: `rails db:{create,migrate,seed}`
 
-* Ruby version
+#### Running the App
+* $ `rails s` 
+* Open http://localhost:3000/ in your browser
+* Enjoy!
 
-* System dependencies
+#### Features Implemented
+  * CRUD Functionality
+    * Create, Edit, Delete, and View a list of inventory items
+  * Ability to create warehouses and assign inventory to specific locations 
 
-* Configuration
+#### Database 
+![warehouse_db](https://user-images.githubusercontent.com/84606723/168929662-c3c4d72c-95bb-4d28-852c-35d54369b51f.png)
 
-* Database creation
+#### Framework
+<p>
+  <img src="https://img.shields.io/badge/Ruby%20On%20Rails-b81818.svg?&style=flat&logo=rubyonrails&logoColor=white" />
+</p>
 
-* Database initialization
+#### Languages
+<p>
+  <img src="https://img.shields.io/badge/Ruby-CC0000.svg?&style=flaste&logo=ruby&logoColor=white" />
+  <img src="https://img.shields.io/badge/ActiveRecord-CC0000.svg?&style=flaste&logo=rubyonrails&logoColor=white" />
+</p>
 
-* How to run the test suite
+#### Tools
+<p>
+  <img src="https://img.shields.io/badge/Atom-66595C.svg?&style=flaste&logo=atom&logoColor=white" />  
+  <img src="https://img.shields.io/badge/Git-F05032.svg?&style=flaste&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?&style=flaste&logo=postgresql&logoColor=white" />
+</p>
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Gems
+<p>
+  <img src="https://img.shields.io/badge/rspec--rails-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />
+  <img src="https://img.shields.io/badge/pry-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />  
+  <img src="https://img.shields.io/badge/simplecov-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />  
+</p>
 
-* Deployment instructions
-
-* ...
+#### Development Principles
+<p>
+  <img src="https://img.shields.io/badge/OOP-b81818.svg?&style=flaste&logo=OOP&logoColor=white" />
+  <img src="https://img.shields.io/badge/TDD-b87818.svg?&style=flaste&logo=TDD&logoColor=white" />
+  <img src="https://img.shields.io/badge/MVC-b8b018.svg?&style=flaste&logo=MVC&logoColor=white" />
+  <img src="https://img.shields.io/badge/REST-33b818.svg?&style=flaste&logo=REST&logoColor=white" />  
+</p>
