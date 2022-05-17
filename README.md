@@ -4,8 +4,8 @@ This application utilizes CRUD functionality and an MVC structure to create inve
 
 #### Setup:
 * Fork and Clone the repo
-* Install gem packages: `bundle install`
-* Setup the database: `rails db:{create,migrate,seed}`
+* Install gem packages: $`bundle install`
+* Setup the database: $`rails db:{create,migrate,seed}`
 
 #### Running the App
 * $ `rails s` 
