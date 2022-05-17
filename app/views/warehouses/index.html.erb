@@ -1,3 +1,6 @@
 <h1>Warehouses</h1>
-
+<% @warehouses.each do |warehouse| %>
+  <p><%= warehouse.name %></p>
+  <li>Location: <%= warehouse.location %></li>
+<% end %>
 <%= button_to "Create Warehouse", new_warehouse_path, method: :get %>
