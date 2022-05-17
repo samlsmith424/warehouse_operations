@@ -1,0 +1,17 @@
+<h1><%= @warehouse.name %> Warehouse Information</h1>
+<hr>
+<h4>Location: <%= @warehouse.location %></h4>
+
+<h4>Add inventory items to this warehouse:</h4>
+<%= form_with url: "/warehouses/#{@warehouse.id}", method: :patch, local: true do |f| %>
+  <p><%= f.label :select_item_below %></p>
+  <ul><%= f.collection_select :items, Item.order(:name), :id, :name %></ul>
+  <%= f.submit "Add Item" %>
+<% end %>
+
+<section id="selected">
+  <p>Selected Items: </p>
+  <% @warehouse.items.each do |item| %>
+    <%= item.name %><br>
+  <% end %>
+</section>

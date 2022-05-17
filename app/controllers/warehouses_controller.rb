@@ -5,7 +5,7 @@ class WarehousesController < ApplicationController
   end
 
   def show
-
+    @warehouse = Warehouse.find(params[:id])
   end
 
   def create
@@ -18,13 +18,15 @@ class WarehousesController < ApplicationController
   end
 
   def update
-    # if params[:add_item].present?
-    # add item method
     warehouse = Warehouse.find_by(id: params[:id])
-    item = Item.find_by(id: params["items"][1].to_i)
+    item = Item.find_by(id: params[:items].to_i)
     warehouse.add_item(item)
-    redirect_to warehouses_path
+    redirect_to warehouse_path(warehouse)
   end
+  # warehouse = Warehouse.find_by(id: params[:id])
+  # item = Item.find_by(id: params["items"][1].to_i)
+  # warehouse.add_item(item)
+  # redirect_to warehouse_path(warehouse)
 
   private
 
