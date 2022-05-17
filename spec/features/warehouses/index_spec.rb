@@ -28,4 +28,15 @@ RSpec.describe "Warehouses Index Page" do
     expect(page).to have_content("Assign To Inventory")
 
   end
+
+  it 'has a link to the warehouse show page' do
+    warehouse = Warehouse.create(name: "Large Warehouse", location: "Los Angeles, CA")
+    visit warehouses_path
+
+    expect(page).to have_link(warehouse.name)
+
+    click_on(warehouse.name)
+
+    expect(current_path).to eq(warehouse_path(warehouse))
+  end
 end

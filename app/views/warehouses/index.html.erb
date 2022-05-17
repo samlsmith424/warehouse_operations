@@ -1,8 +1,8 @@
 <h1>Warehouses</h1>
 <% @warehouses.each do |warehouse| %>
-  <p><%= warehouse.name %></p>
+  <p><%=link_to warehouse.name, warehouse_path(warehouse), method: :get %></p>
   <li>Location: <%= warehouse.location %></li>
-  
+
   <%= form_with url: "/warehouses/#{warehouse.id}", method: :patch, local: true do |f| %>
   <p><%= f.label :add_item %></p>
   <ul><%= f.collection_check_boxes :items, Item.order(:name), :id, :name %></ul>

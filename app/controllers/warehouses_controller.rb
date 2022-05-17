@@ -4,6 +4,10 @@ class WarehousesController < ApplicationController
     # @items = Item.all
   end
 
+  def show
+
+  end
+
   def create
     warehouse = Warehouse.new(warehouse_params)
     if warehouse.save
