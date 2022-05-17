@@ -1,6 +1,7 @@
 class WarehousesController < ApplicationController
   def index
     @warehouses = Warehouse.all
+    # @items = Item.all
   end
 
   def create
@@ -10,6 +11,15 @@ class WarehousesController < ApplicationController
     else
       redirect_to new_warehouse_path, notice: "Please properly fill in all fields."
     end
+  end
+
+  def update
+    # if params[:add_item].present?
+    # add item method
+    warehouse = Warehouse.find_by(id: params[:id])
+    item = Item.find_by(id: params["items"][1].to_i)
+    warehouse.add_item(item)
+    redirect_to warehouses_path
   end
 
   private
