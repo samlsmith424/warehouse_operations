@@ -7,11 +7,14 @@ This application utilizes CRUD functionality and an MVC structure to create inve
 * Install gem packages: $`bundle install`
 * Setup the database: $`rails db:{create,migrate,seed}`
 
-#### Running the App
+#### Running the App Locally
 * $ `rails s` 
 * Open http://localhost:3000/ in your browser
 * Enjoy!
 
+#### Running the App on Replit
+ * Replit link [here](https://shopifybackenddevchallenge.samlsmith424.repl.co/)
+ 
 #### Features Implemented
   * CRUD Functionality
     * Create, Edit, Delete, and View a list of inventory items
