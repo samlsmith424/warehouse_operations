@@ -20,6 +20,11 @@ This application utilizes CRUD functionality and an MVC structure to create inve
 #### Database 
 ![warehouse_db](https://user-images.githubusercontent.com/84606723/168929662-c3c4d72c-95bb-4d28-852c-35d54369b51f.png)
 
+#### Testing
+ * RSpec and Simplecov to ensure all features are covered by tests. <br>
+ ![shopify_tests](https://user-images.githubusercontent.com/84606723/168956657-5a0edebe-47eb-4b1d-b170-e17fbf70efe5.png)<br>
+ ![shopify coverage](https://user-images.githubusercontent.com/84606723/168956833-2b3e0a7c-f6e8-401b-ac3b-1ebe5734ef0b.png)
+ 
 #### Framework
 <p>
   <img src="https://img.shields.io/badge/Ruby%20On%20Rails-b81818.svg?&style=flat&logo=rubyonrails&logoColor=white" />
@@ -53,3 +58,6 @@ This application utilizes CRUD functionality and an MVC structure to create inve
   <img src="https://img.shields.io/badge/MVC-b8b018.svg?&style=flaste&logo=MVC&logoColor=white" />
   <img src="https://img.shields.io/badge/REST-33b818.svg?&style=flaste&logo=REST&logoColor=white" />  
 </p>
+
+
+
