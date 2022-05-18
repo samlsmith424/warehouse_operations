@@ -43,8 +43,9 @@ This application utilizes CRUD functionality and an MVC structure to create inve
 <p>
   <img src="https://img.shields.io/badge/Atom-66595C.svg?&style=flaste&logo=atom&logoColor=white" />  
   <img src="https://img.shields.io/badge/Git-F05032.svg?&style=flaste&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" /><br>
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?&style=flaste&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Replit-DD1200?style=flaste&logo=Replit&logoColor=white" />
 </p>
 
 #### Gems
