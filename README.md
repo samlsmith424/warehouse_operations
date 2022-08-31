@@ -1,4 +1,4 @@
-# Inventory Management
+# Warehouse Inventory Management
 
 This application utilizes CRUD functionality and an MVC structure to create inventory items that can be assigned to warehouses. 
 
